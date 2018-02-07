@@ -17,7 +17,6 @@ namespace MosheBinieli.Stack
             int valueFromStack = myStack.Pop();
 
             Console.WriteLine(valueFromStack);
-
         }
 
         private static void AddValuesToStack(Stack<int> myStack)
