@@ -18,7 +18,6 @@ public class Stack<T>
     #endregion
 
     #region Public Methods
-
     public void Push(T newValue)
     {
         if (this.Head == null)

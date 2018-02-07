@@ -7,3 +7,4 @@ Existing data structures:
 
  - Stack.
  - Queue.
+ - Binary Search Tree. ( In process )
