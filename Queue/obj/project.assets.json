@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\Queue\\Queue.csproj",
+      "projectUniqueName": "c:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\Queue\\Queue.csproj",
       "projectName": "Queue",
-      "projectPath": "C:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\Queue\\Queue.csproj",
+      "projectPath": "c:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\Queue\\Queue.csproj",
       "packagesPath": "C:\\Users\\mmosh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\Queue\\obj\\",
+      "outputPath": "c:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\Queue\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
