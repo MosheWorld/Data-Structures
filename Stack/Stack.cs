@@ -2,16 +2,22 @@ using System;
 
 public class Stack<T>
 {
+    #region Members
     private Node<T> Head;
     private Node<T> Tail;
     private int Counter;
+    #endregion
 
+    #region Constructor
     public Stack()
     {
         this.Head = null;
         this.Tail = null;
         this.Counter = 0;
     }
+    #endregion
+
+    #region Public Methods
 
     public void Push(T newValue)
     {
@@ -23,6 +29,7 @@ public class Stack<T>
         else
         {
             this.Head.Next = new Node<T>();
+            this.Head.Next.Previous = this.Head;
             this.Head = this.Head.Next;
         }
 
@@ -40,26 +47,31 @@ public class Stack<T>
         return default(T);
     }
 
-    public void DisplayStack()
+    public T Pop()
     {
-        Node<T> Inspector;
+        if (this.Head == null)
+            return default(T);
 
-        if (this.Tail == null)
-            return;
+        T valueToReturn = this.Head.Value;
 
-        Inspector = this.Tail;
-
-        while (Inspector != null)
+        if (this.Head.Previous == null)
         {
-            Console.Write($"{Inspector.Value}-> ");
-            Inspector = Inspector.Next;
+            this.Head = null;
+            this.Tail = null;
+        }
+        else
+        {
+            this.Head = this.Head.Previous;
+            this.Head.Next = null;
         }
 
-        Console.WriteLine();
+        this.Counter--;
+        return valueToReturn;
     }
 
     public int Count()
     {
         return this.Counter;
     }
+    #endregion
 }
