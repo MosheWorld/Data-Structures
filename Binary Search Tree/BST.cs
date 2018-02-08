@@ -47,22 +47,24 @@ public class BST
         if (newValue < Leaf.Value)
         {
             if (Leaf.Left == null)
-                Leaf.Left = DynamicAllocationWithValueInsertion(newValue);
+                Leaf.Left = DynamicAllocationWithValueInsertion(newValue, Leaf);
             else
                 InsertValueRecursively(Leaf.Left, newValue);
         }
         else
         {
             if (Leaf.Right == null)
-                Leaf.Right = DynamicAllocationWithValueInsertion(newValue);
+                Leaf.Right = DynamicAllocationWithValueInsertion(newValue, Leaf);
             else
                 InsertValueRecursively(Leaf.Right, newValue);
         }
     }
 
-    private Node DynamicAllocationWithValueInsertion(int newValue)
+    private Node DynamicAllocationWithValueInsertion(int newValue, Node connectParentLeaf)
     {
         Node newNode = new Node();
+
+        newNode.Parent = connectParentLeaf;
         newNode.Value = newValue;
 
         return newNode;
@@ -73,7 +75,7 @@ public class BST
         if (Leaf == null)
             return;
 
-        Console.WriteLine(Leaf.Value);
+        Console.Write(Leaf.Value);
         PreOrderExecute(Leaf.Left);
         PreOrderExecute(Leaf.Right);
     }
