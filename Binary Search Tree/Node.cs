@@ -1,9 +1,9 @@
-public class Node<T>
+public class Node
 {
     #region Members
-    public T Value;
-    public Node<T> Left;
-    public Node<T> Right;
+    public int Value;
+    public Node Left;
+    public Node Right;
     #endregion
 
     #region Constructor
@@ -11,6 +11,7 @@ public class Node<T>
     {
         this.Left = null;
         this.Right = null;
+        this.Value = 0;
     }
     #endregion
 }

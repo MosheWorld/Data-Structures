@@ -6,7 +6,14 @@ namespace MosheBinieli.Binary_Search_Tree
     {
         static void Main(string[] args)
         {
-            
+            BST bst = new BST();
+
+            bst.Add(3);
+            bst.Add(5);
+            bst.Add(7);
+            bst.Add(1);
+
+            bst.PreOrder();
         }
     }
 }
