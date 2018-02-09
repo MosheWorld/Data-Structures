@@ -50,6 +50,7 @@ public class BST
     public void Delete(int valueToRemove)
     {
         this.Root = DeleteRec(this.Root, valueToRemove);
+        this.Counter--;
     }
     #endregion
 
