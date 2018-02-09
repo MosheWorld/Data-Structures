@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\LinkedList\\LinkedList.csproj",
+      "projectUniqueName": "c:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\LinkedList\\LinkedList.csproj",
       "projectName": "LinkedList",
-      "projectPath": "C:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\LinkedList\\LinkedList.csproj",
+      "projectPath": "c:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\LinkedList\\LinkedList.csproj",
       "packagesPath": "C:\\Users\\mmosh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\LinkedList\\obj\\",
+      "outputPath": "c:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\LinkedList\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

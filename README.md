@@ -7,7 +7,7 @@ Existing data structures:
 
  - Stack.
  - Queue.
- - Linked List. ( In Process )
+ - Linked List.
  - Binary Search Tree. ( Remove Node function remains to complete )
  - AVL Tree. ( In future )
  - Depth-First Search. ( In future )
