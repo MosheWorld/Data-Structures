@@ -38,13 +38,25 @@ public class BST
     public void PreOrder()
     {
         PreOrderExecute(this.Root);
+        Console.WriteLine();
+    }
+
+    public void InOrder()
+    {
+        InOrderExecute(this.Root);
+        Console.WriteLine();
+    }
+
+    public void Delete(int valueToRemove)
+    {
+        this.Root = DeleteRec(this.Root, valueToRemove);
     }
     #endregion
 
     #region Private Methods
     private void InsertValueRecursively(Node Leaf, int newValue)
     {
-        if (newValue < Leaf.Value)
+        if (newValue <= Leaf.Value)
         {
             if (Leaf.Left == null)
                 Leaf.Left = DynamicAllocationWithValueInsertion(newValue, Leaf);
@@ -75,9 +87,59 @@ public class BST
         if (Leaf == null)
             return;
 
-        Console.Write(Leaf.Value);
+        Console.Write($"{Leaf.Value} ");
         PreOrderExecute(Leaf.Left);
         PreOrderExecute(Leaf.Right);
+    }
+
+    private void InOrderExecute(Node Leaf)
+    {
+        if (Leaf == null)
+            return;
+
+        InOrderExecute(Leaf.Left);
+        Console.Write($"{Leaf.Value} ");
+        InOrderExecute(Leaf.Right);
+    }
+
+    private Node DeleteRec(Node root, int key)
+    {
+
+        if (root == null)
+            return root;
+
+        if (key < root.Value)
+            root.Left = DeleteRec(root.Left, key);
+        else if (key > root.Value)
+            root.Right = DeleteRec(root.Right, key);
+        else
+        {
+            // Node with only one child or no child.
+            if (root.Left == null)
+                return root.Right;
+            else if (root.Right == null)
+                return root.Left;
+
+            // Node with two children: Get the inorder successor ( Smallest in the right subtree )
+            root.Value = MinValue(root.Right);
+
+            // Delete the inorder successor
+            root.Right = DeleteRec(root.Right, root.Value);
+        }
+
+        return root;
+    }
+    private int MinValue(Node root)
+    {
+        int min = root.Value;
+
+        while (root.Left != null)
+        {
+            min = root.Left.Value;
+            root = root.Left;
+        }
+
+        return min;
     }
     #endregion
 }
