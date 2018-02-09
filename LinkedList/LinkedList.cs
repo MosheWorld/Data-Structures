@@ -99,7 +99,10 @@ public class LinkedList<T>
             index--;
         }
 
-        return runner.Value;
+        if (runner != null)
+            return runner.Value;
+        else
+            return default(T);
     }
 
     public List<T> ToList()
@@ -131,6 +134,7 @@ public class LinkedList<T>
         }
 
         PerformDeleteOfItem(runner);
+        this.Counter--;
     }
     #endregion
 
