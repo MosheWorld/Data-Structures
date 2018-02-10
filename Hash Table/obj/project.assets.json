@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\Hash Table\\Hash Table.csproj",
+      "projectUniqueName": "c:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\Hash Table\\Hash Table.csproj",
       "projectName": "Hash Table",
-      "projectPath": "C:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\Hash Table\\Hash Table.csproj",
+      "projectPath": "c:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\Hash Table\\Hash Table.csproj",
       "packagesPath": "C:\\Users\\mmosh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\Hash Table\\obj\\",
+      "outputPath": "c:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\Hash Table\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

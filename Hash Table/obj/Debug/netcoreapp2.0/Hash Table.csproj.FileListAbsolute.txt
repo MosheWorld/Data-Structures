@@ -1,0 +1,10 @@
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Hash Table\bin\Debug\netcoreapp2.0\Hash Table.deps.json
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Hash Table\bin\Debug\netcoreapp2.0\Hash Table.runtimeconfig.json
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Hash Table\bin\Debug\netcoreapp2.0\Hash Table.runtimeconfig.dev.json
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Hash Table\bin\Debug\netcoreapp2.0\Hash Table.dll
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Hash Table\bin\Debug\netcoreapp2.0\Hash Table.pdb
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Hash Table\obj\Debug\netcoreapp2.0\Hash Table.csproj.CoreCompileInputs.cache
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Hash Table\obj\Debug\netcoreapp2.0\Hash Table.AssemblyInfoInputs.cache
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Hash Table\obj\Debug\netcoreapp2.0\Hash Table.AssemblyInfo.cs
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Hash Table\obj\Debug\netcoreapp2.0\Hash Table.dll
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Hash Table\obj\Debug\netcoreapp2.0\Hash Table.pdb
