@@ -8,7 +8,7 @@ Existing data structures:
  - Stack.
  - Queue.
  - Linked List.
- - Hash Table. ( In future )
+ - Hash Table. ( In progress )
  - Binary Search Tree.
- - AVL Tree. ( In progress )
+ - AVL Tree.
  - Heap. ( In future )

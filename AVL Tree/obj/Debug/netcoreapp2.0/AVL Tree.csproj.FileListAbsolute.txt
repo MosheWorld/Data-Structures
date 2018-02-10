@@ -1,0 +1,10 @@
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\AVL Tree\bin\Debug\netcoreapp2.0\AVL Tree.deps.json
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\AVL Tree\bin\Debug\netcoreapp2.0\AVL Tree.runtimeconfig.json
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\AVL Tree\bin\Debug\netcoreapp2.0\AVL Tree.runtimeconfig.dev.json
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\AVL Tree\bin\Debug\netcoreapp2.0\AVL Tree.dll
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\AVL Tree\bin\Debug\netcoreapp2.0\AVL Tree.pdb
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\AVL Tree\obj\Debug\netcoreapp2.0\AVL Tree.csproj.CoreCompileInputs.cache
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\AVL Tree\obj\Debug\netcoreapp2.0\AVL Tree.AssemblyInfoInputs.cache
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\AVL Tree\obj\Debug\netcoreapp2.0\AVL Tree.AssemblyInfo.cs
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\AVL Tree\obj\Debug\netcoreapp2.0\AVL Tree.dll
+c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\AVL Tree\obj\Debug\netcoreapp2.0\AVL Tree.pdb
