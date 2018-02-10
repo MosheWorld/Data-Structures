@@ -7,14 +7,12 @@ public abstract class AbstractHeap
     protected List<int> elements = new List<int>();
     #endregion
 
-    #region Public Methods
+    #region Protected Methods
     protected int GetSize()
     {
         return elements.Count;
     }
-    #endregion
 
-    #region Protected Methods
     protected int GetLeft(int index)
     {
         return 2 * index + 1;
