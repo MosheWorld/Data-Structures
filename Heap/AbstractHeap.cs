@@ -23,11 +23,11 @@ public abstract class AbstractHeap
         return 2 * index + 2;
     }
 
-    protected void Swap(int index, int smallest)
+    protected void Swap(int first, int second)
     {
-        int temp = elements[index];
-        elements[index] = elements[smallest];
-        elements[smallest] = temp;
+        int temp = elements[first];
+        elements[first] = elements[second];
+        elements[second] = temp;
     }
 
     protected int GetParent(int index)
