@@ -1,30 +1,31 @@
 ﻿using System;
 
-namespace MosheBinieli.Heap
+namespace MosheBinieli.HeapGeneric
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Heap<int> myHeap = new Heap<int>();
+            /**
+            Could have implemented strategy & factory pattern with executor class, but I avoid it to let it stay simple.
 
-            InsertValuesToHeap(myHeap);
+            here is whole project in my GitHub for design patterns.
+            https://github.com/MosheWorld/Design-Patterns
+             */
+            try
+            {
+                HeapExecutor executor = new HeapExecutor();
 
-            PopValueAndDisplay(myHeap);
-            PopValueAndDisplay(myHeap);
-        }
+                executor.ExecuteMinHeap();
 
-        private static void PopValueAndDisplay(Heap<int> myHeap)
-        {
-            int value = myHeap.PopMin();
-            Console.WriteLine(value);
-        }
+                Console.WriteLine();
 
-        private static void InsertValuesToHeap(Heap<int> myHeap)
-        {
-            myHeap.Add(1);
-            myHeap.Add(6);
-            myHeap.Add(3);
+                executor.ExecuteMaxHeap();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
