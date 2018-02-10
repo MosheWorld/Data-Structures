@@ -11,4 +11,4 @@ Existing data structures:
  - Hash Table.
  - Binary Search Tree.
  - AVL Tree.
- - Heap. ( In progress )
+ - Heap.
