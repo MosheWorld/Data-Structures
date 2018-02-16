@@ -28,7 +28,9 @@ namespace MosheBinieli._Un_Directed_Graph
             graph.AddVertices(5);
             graph.AddVertices(4);
 
-
+            graph.AddDirectedEdge(1, 2);
+            graph.AddDirectedEdge(2, 3);
+            graph.AddUnDirectedEdge(4, 5, 112);
         }
     }
 }

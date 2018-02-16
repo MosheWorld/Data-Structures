@@ -23,23 +23,31 @@ public class Graph
         this.DictionaryOfVertices.Add(newVerticesValue, new Vertice(newVerticesValue));
     }
 
-    public void AddDirectedEdge(int source, int destination)
+    public void AddDirectedEdge(int source, int destination, int weight = 0)
     {
-        Vertice sourceVertice = null, destinationVertice = null;
-
-        if (this.DictionaryOfVertices.ContainsKey(source))
-            sourceVertice = this.DictionaryOfVertices.GetValueOrDefault(source);
-
-        if (this.DictionaryOfVertices.ContainsKey(destination))
-            destinationVertice = this.DictionaryOfVertices.GetValueOrDefault(destination);
+        Vertice sourceVertice = GetVertice(source);
+        Vertice destinationVertice = GetVertice(destination);
 
         if (sourceVertice == null || destinationVertice == null)
             throw new ArgumentException("Given source value or destination value doesn't exist in graph.");
+
+        if (!sourceVertice.ContainsEdge(destinationVertice))
+            sourceVertice.AddEdge(destinationVertice, weight);
     }
 
-    public void AddUnDirectedEdge(int vertice1, int vertice2)
+    public void AddUnDirectedEdge(int vertice1, int vertice2, int weight = 0)
     {
+        Vertice sourceVertice = GetVertice(vertice1);
+        Vertice destinationVertice = GetVertice(vertice2);
 
+        if (sourceVertice == null || destinationVertice == null)
+            throw new ArgumentException("Given source value or destination value doesn't exist in graph.");
+
+        if (!sourceVertice.ContainsEdge(destinationVertice))
+            sourceVertice.AddEdge(destinationVertice, weight);
+
+        if (!destinationVertice.ContainsEdge(sourceVertice))
+            destinationVertice.AddEdge(sourceVertice, weight);
     }
 
     public void DisplayGraph()
@@ -48,8 +56,24 @@ public class Graph
         {
             Vertice currentVertice = this.DictionaryOfVertices.GetValueOrDefault(key);
 
-            Console.WriteLine(currentVertice.Value);
+            Console.Write(currentVertice.Value + " : { ");
+            currentVertice.DisplayOutgoingVertices();
+            Console.Write(" }");
+
+            Console.WriteLine("\n");
         }
+    }
+    #endregion
+
+    #region Private Methods
+    public Vertice GetVertice(int valueOfVertice)
+    {
+        Vertice verticeToReturn = null;
+
+        if (this.DictionaryOfVertices.ContainsKey(valueOfVertice))
+            verticeToReturn = this.DictionaryOfVertices.GetValueOrDefault(valueOfVertice);
+
+        return verticeToReturn;
     }
     #endregion
 }
