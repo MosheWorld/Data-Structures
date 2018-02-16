@@ -6,7 +6,29 @@ namespace MosheBinieli._Un_Directed_Graph
     {
         static void Main(string[] args)
         {
-            
+            try
+            {
+                Graph graph = new Graph();
+
+                AddVerticesAndEdgesToGraph(graph);
+
+                graph.DisplayGraph();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private static void AddVerticesAndEdgesToGraph(Graph graph)
+        {
+            graph.AddVertices(1);
+            graph.AddVertices(3);
+            graph.AddVertices(2);
+            graph.AddVertices(5);
+            graph.AddVertices(4);
+
+
         }
     }
 }
