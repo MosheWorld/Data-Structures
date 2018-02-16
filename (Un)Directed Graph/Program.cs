@@ -6,7 +6,7 @@ namespace MosheBinieli._Un_Directed_Graph
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
