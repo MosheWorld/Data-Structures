@@ -1,0 +1,10 @@
+C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\(Un)Directed Graph\bin\Debug\netcoreapp2.0\(Un)Directed Graph.deps.json
+C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\(Un)Directed Graph\bin\Debug\netcoreapp2.0\(Un)Directed Graph.runtimeconfig.json
+C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\(Un)Directed Graph\bin\Debug\netcoreapp2.0\(Un)Directed Graph.runtimeconfig.dev.json
+C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\(Un)Directed Graph\bin\Debug\netcoreapp2.0\(Un)Directed Graph.dll
+C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\(Un)Directed Graph\bin\Debug\netcoreapp2.0\(Un)Directed Graph.pdb
+C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\(Un)Directed Graph\obj\Debug\netcoreapp2.0\(Un)Directed Graph.csproj.CoreCompileInputs.cache
+C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\(Un)Directed Graph\obj\Debug\netcoreapp2.0\(Un)Directed Graph.AssemblyInfoInputs.cache
+C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\(Un)Directed Graph\obj\Debug\netcoreapp2.0\(Un)Directed Graph.AssemblyInfo.cs
+C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\(Un)Directed Graph\obj\Debug\netcoreapp2.0\(Un)Directed Graph.dll
+C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\(Un)Directed Graph\obj\Debug\netcoreapp2.0\(Un)Directed Graph.pdb
