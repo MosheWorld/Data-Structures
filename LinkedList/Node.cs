@@ -9,8 +9,9 @@ public class Node<T>
     #region Constructor
     public Node()
     {
-        this.Next = null;
-        this.Previous = null;
+        Value = default(T);
+        Next = null;
+        Previous = null;
     }
     #endregion
 }

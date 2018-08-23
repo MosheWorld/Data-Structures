@@ -8,3 +8,4 @@ c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Heap\obj\Debu
 c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Heap\obj\Debug\netcoreapp2.0\Heap.AssemblyInfo.cs
 c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Heap\obj\Debug\netcoreapp2.0\Heap.dll
 c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Heap\obj\Debug\netcoreapp2.0\Heap.pdb
+C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Heap\obj\Debug\netcoreapp2.0\Heap.csprojAssemblyReference.cache

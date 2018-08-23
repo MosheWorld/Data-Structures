@@ -8,3 +8,4 @@ C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\(Un)Directed 
 C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\(Un)Directed Graph\obj\Debug\netcoreapp2.0\(Un)Directed Graph.AssemblyInfo.cs
 C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\(Un)Directed Graph\obj\Debug\netcoreapp2.0\(Un)Directed Graph.dll
 C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\(Un)Directed Graph\obj\Debug\netcoreapp2.0\(Un)Directed Graph.pdb
+C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\(Un)Directed Graph\obj\Debug\netcoreapp2.0\(Un)Directed Graph.csprojAssemblyReference.cache

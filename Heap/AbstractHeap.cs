@@ -4,7 +4,14 @@ using System.Collections.Generic;
 public abstract class AbstractHeap
 {
     #region Members
-    protected List<int> elements = new List<int>();
+    protected List<int> elements;
+    #endregion
+
+    #region Constructor
+    public AbstractHeap()
+    {
+        elements = new List<int>();
+    }
     #endregion
 
     #region Protected Methods

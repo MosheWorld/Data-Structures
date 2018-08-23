@@ -10,109 +10,119 @@ public class BST
     #region Constructor
     public BST()
     {
-        this.Root = null;
+        Root = null;
     }
     #endregion
 
     #region Public Methods
     public int Count()
     {
-        return this.Counter;
+        return Counter;
     }
 
-    public void Add(int newValue)
+    public void Add(int value)
     {
-        if (this.Root == null)
+        if (Root == null)
         {
-            this.Root = new Node();
-            this.Root.Value = newValue;
+            Root = new Node();
+            Root.Value = value;
         }
         else
-        {
-            InsertValueRecursively(this.Root, newValue);
-        }
+            Add(Root, value);
 
-        this.Counter++;
+        Counter++;
     }
 
     public void PreOrder()
     {
-        PreOrderExecute(this.Root);
+        PreOrder(Root);
         Console.WriteLine();
     }
 
     public void InOrder()
     {
-        InOrderExecute(this.Root);
+        InOrder(Root);
         Console.WriteLine();
     }
 
-    public void Delete(int valueToRemove)
+    public void PostOrder()
     {
-        this.Root = DeleteRec(this.Root, valueToRemove);
-        this.Counter--;
+        PostOrder(Root);
+        Console.WriteLine();
+    }
+
+    public void Delete(int value)
+    {
+        Root = Delete(Root, value);
+        Counter--;
     }
     #endregion
 
     #region Private Methods
-    private void InsertValueRecursively(Node Leaf, int newValue)
+    private void Add(Node Leaf, int newValue)
     {
         if (newValue <= Leaf.Value)
         {
             if (Leaf.Left == null)
                 Leaf.Left = DynamicAllocationWithValueInsertion(newValue, Leaf);
             else
-                InsertValueRecursively(Leaf.Left, newValue);
+                Add(Leaf.Left, newValue);
         }
         else
         {
             if (Leaf.Right == null)
                 Leaf.Right = DynamicAllocationWithValueInsertion(newValue, Leaf);
             else
-                InsertValueRecursively(Leaf.Right, newValue);
+                Add(Leaf.Right, newValue);
         }
     }
 
-    private Node DynamicAllocationWithValueInsertion(int newValue, Node connectParentLeaf)
+    private Node DynamicAllocationWithValueInsertion(int value, Node parentLeaf)
     {
-        Node newNode = new Node();
-
-        newNode.Parent = connectParentLeaf;
-        newNode.Value = newValue;
-
-        return newNode;
+        return new Node
+        {
+            Value = value,
+            Parent = parentLeaf,
+        };
     }
 
-    private void PreOrderExecute(Node Leaf)
+    private void PreOrder(Node Leaf)
     {
         if (Leaf == null)
             return;
 
         Console.Write($"{Leaf.Value} ");
-        PreOrderExecute(Leaf.Left);
-        PreOrderExecute(Leaf.Right);
+        PreOrder(Leaf.Left);
+        PreOrder(Leaf.Right);
     }
 
-    private void InOrderExecute(Node Leaf)
+    private void InOrder(Node Leaf)
     {
         if (Leaf == null)
             return;
 
-        InOrderExecute(Leaf.Left);
+        InOrder(Leaf.Left);
         Console.Write($"{Leaf.Value} ");
-        InOrderExecute(Leaf.Right);
+        InOrder(Leaf.Right);
     }
 
-    private Node DeleteRec(Node root, int key)
+    private void PostOrder(Node Leaf)
+    {
+        PostOrder(Leaf.Left);
+        PostOrder(Leaf.Right);
+        Console.Write($"{Leaf.Value} ");
+    }
+
+    private Node Delete(Node root, int key)
     {
 
         if (root == null)
             return root;
 
         if (key < root.Value)
-            root.Left = DeleteRec(root.Left, key);
+            root.Left = Delete(root.Left, key);
         else if (key > root.Value)
-            root.Right = DeleteRec(root.Right, key);
+            root.Right = Delete(root.Right, key);
         else
         {
             // Node with only one child or no child.
@@ -125,11 +135,12 @@ public class BST
             root.Value = MinValue(root.Right);
 
             // Delete the inorder successor
-            root.Right = DeleteRec(root.Right, root.Value);
+            root.Right = Delete(root.Right, root.Value);
         }
 
         return root;
     }
+
     private int MinValue(Node root)
     {
         int min = root.Value;

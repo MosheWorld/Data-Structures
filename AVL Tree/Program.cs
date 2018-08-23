@@ -1,28 +1,28 @@
-﻿using System;
-
-namespace MosheBinieli.AVL_Tree
+﻿namespace MosheBinieli.AVL_Tree
 {
     class Program
     {
         static void Main(string[] args)
         {
-            AVL avlTree = new AVL();
+            AVL avlTree = CreateValuesForTree();
 
-            AddValuesToAVLTree(avlTree);
-
-            avlTree.DisplayTree();
+            avlTree.InOrder();
 
             avlTree.Delete(7);
 
-            avlTree.DisplayTree();
+            avlTree.InOrder();
         }
 
-        private static void AddValuesToAVLTree(AVL avlTree)
+        private static AVL CreateValuesForTree()
         {
+            AVL avlTree = new AVL();
+
             avlTree.Add(5);
             avlTree.Add(3);
             avlTree.Add(7);
             avlTree.Add(2);
+
+            return avlTree;
         }
     }
 }

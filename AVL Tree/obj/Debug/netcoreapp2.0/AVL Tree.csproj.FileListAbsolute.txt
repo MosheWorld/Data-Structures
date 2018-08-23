@@ -8,3 +8,4 @@ c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\AVL Tree\obj\
 c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\AVL Tree\obj\Debug\netcoreapp2.0\AVL Tree.AssemblyInfo.cs
 c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\AVL Tree\obj\Debug\netcoreapp2.0\AVL Tree.dll
 c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\AVL Tree\obj\Debug\netcoreapp2.0\AVL Tree.pdb
+C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\AVL Tree\obj\Debug\netcoreapp2.0\AVL Tree.csprojAssemblyReference.cache

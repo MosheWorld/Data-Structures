@@ -8,3 +8,4 @@ c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Queue\obj\Deb
 c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Queue\obj\Debug\netcoreapp2.0\Queue.AssemblyInfo.cs
 c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Queue\obj\Debug\netcoreapp2.0\Queue.dll
 c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Queue\obj\Debug\netcoreapp2.0\Queue.pdb
+C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Queue\obj\Debug\netcoreapp2.0\Queue.csprojAssemblyReference.cache

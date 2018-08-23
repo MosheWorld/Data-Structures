@@ -10,17 +10,17 @@ public class Graph
     #region Constructor
     public Graph()
     {
-        this.DictionaryOfVertices = new Dictionary<int, Vertice>();
+        DictionaryOfVertices = new Dictionary<int, Vertice>();
     }
     #endregion
 
     #region Public Methods
-    public void AddVertices(int newVerticesValue)
+    public void AddVertice(int value)
     {
-        if (this.DictionaryOfVertices.ContainsKey(newVerticesValue))
+        if (DictionaryOfVertices.ContainsKey(value))
             return;
 
-        this.DictionaryOfVertices.Add(newVerticesValue, new Vertice(newVerticesValue));
+        DictionaryOfVertices.Add(value, new Vertice(value));
     }
 
     public void AddDirectedEdge(int source, int destination, int weight = 0)
@@ -54,7 +54,7 @@ public class Graph
     {
         foreach (int key in this.DictionaryOfVertices.Keys)
         {
-            Vertice currentVertice = this.DictionaryOfVertices.GetValueOrDefault(key);
+            Vertice currentVertice = DictionaryOfVertices.GetValueOrDefault(key);
 
             Console.Write(currentVertice.Value + " : { ");
             currentVertice.DisplayOutgoingVertices();
@@ -66,12 +66,12 @@ public class Graph
     #endregion
 
     #region Private Methods
-    public Vertice GetVertice(int valueOfVertice)
+    public Vertice GetVertice(int value)
     {
         Vertice verticeToReturn = null;
 
-        if (this.DictionaryOfVertices.ContainsKey(valueOfVertice))
-            verticeToReturn = this.DictionaryOfVertices.GetValueOrDefault(valueOfVertice);
+        if (DictionaryOfVertices.ContainsKey(value))
+            verticeToReturn = DictionaryOfVertices.GetValueOrDefault(value);
 
         return verticeToReturn;
     }

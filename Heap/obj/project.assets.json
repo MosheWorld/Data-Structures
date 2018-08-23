@@ -670,22 +670,24 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\Heap\\Heap.csproj",
+      "projectUniqueName": "C:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\Heap\\Heap.csproj",
       "projectName": "Heap",
-      "projectPath": "c:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\Heap\\Heap.csproj",
+      "projectPath": "C:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\Heap\\Heap.csproj",
       "packagesPath": "C:\\Users\\mmosh\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\Heap\\obj\\",
+      "outputPath": "C:\\Users\\mmosh\\Desktop\\Moshe Files\\GitHub Projects\\Data Structures\\Heap\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\mmosh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\mmosh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -704,7 +706,7 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           }
         },

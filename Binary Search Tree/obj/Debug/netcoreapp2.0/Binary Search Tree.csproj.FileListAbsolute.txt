@@ -8,3 +8,4 @@ c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Binary Search
 c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Binary Search Tree\obj\Debug\netcoreapp2.0\Binary Search Tree.AssemblyInfo.cs
 c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Binary Search Tree\obj\Debug\netcoreapp2.0\Binary Search Tree.dll
 c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Binary Search Tree\obj\Debug\netcoreapp2.0\Binary Search Tree.pdb
+C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Binary Search Tree\obj\Debug\netcoreapp2.0\Binary Search Tree.csprojAssemblyReference.cache

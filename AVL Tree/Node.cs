@@ -9,7 +9,9 @@ public class Node
     #region Constructor
     public Node(int newData)
     {
-        this.Data = newData;
+        Data = newData;
+        Left = null;
+        Right = null;
     }
     #endregion
 }

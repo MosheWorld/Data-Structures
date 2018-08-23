@@ -8,3 +8,4 @@ c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\LinkedList\ob
 c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\LinkedList\obj\Debug\netcoreapp2.0\LinkedList.AssemblyInfo.cs
 c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\LinkedList\obj\Debug\netcoreapp2.0\LinkedList.dll
 c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\LinkedList\obj\Debug\netcoreapp2.0\LinkedList.pdb
+C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\LinkedList\obj\Debug\netcoreapp2.0\LinkedList.csprojAssemblyReference.cache

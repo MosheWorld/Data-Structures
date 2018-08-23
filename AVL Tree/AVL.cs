@@ -4,48 +4,22 @@ public class AVL
 {
     #region Members
     private Node Root;
+    private int Count;
     #endregion
 
-    #region Public Methods
-    public void Add(int newData)
+    #region Add
+    public void Add(int data)
     {
-        Node newLeaf = new Node(newData);
+        Node newLeaf = new Node(data);
 
-        if (this.Root == null)
-            this.Root = newLeaf;
+        if (Root == null)
+            Root = newLeaf;
         else
-            this.Root = RecursiveInsert(this.Root, newLeaf);
+            Root = Add(Root, newLeaf);
+        Count++;
     }
 
-    public void DisplayTree()
-    {
-        if (this.Root == null)
-        {
-            Console.WriteLine("Tree is empty");
-            return;
-        }
-
-        InOrderDisplayTree(this.Root);
-
-        Console.WriteLine();
-    }
-
-    public void Delete(int target)
-    {
-        this.Root = Delete(this.Root, target);
-    }
-
-    public void Find(int key)
-    {
-        if (Find(key, this.Root).Data == key)
-            Console.WriteLine("{0} was found!", key);
-        else
-            Console.WriteLine("Nothing found!");
-    }
-    #endregion
-
-    #region Private Methods
-    private Node RecursiveInsert(Node current, Node newLeaf)
+    private Node Add(Node current, Node newLeaf)
     {
         if (current == null)
         {
@@ -54,23 +28,131 @@ public class AVL
         }
         else if (newLeaf.Data < current.Data)
         {
-            current.Left = RecursiveInsert(current.Left, newLeaf);
+            current.Left = Add(current.Left, newLeaf);
             current = BalanceTree(current);
         }
         else if (newLeaf.Data >= current.Data)
         {
-            current.Right = RecursiveInsert(current.Right, newLeaf);
+            current.Right = Add(current.Right, newLeaf);
             current = BalanceTree(current);
         }
 
         return current;
     }
+    #endregion
 
+    #region Delete
+    public void Delete(int target)
+    {
+        Root = Delete(Root, target);
+    }
+
+    private Node Delete(Node current, int target)
+    {
+        Node parent;
+
+        if (current == null)
+            return null;
+
+        // Left Sub-Tree.
+        if (target < current.Data)
+        {
+            current.Left = Delete(current.Left, target);
+            if (BalanceFactor(current) == -2)
+            {
+                if (BalanceFactor(current.Right) <= 0)
+                {
+                    current = RotateRR(current);
+                }
+                else
+                {
+                    current = RotateRL(current);
+                }
+            }
+        }
+        // Right subtree.
+        else if (target > current.Data)
+        {
+            current.Right = Delete(current.Right, target);
+            if (BalanceFactor(current) == 2)
+            {
+                if (BalanceFactor(current.Left) >= 0)
+                {
+                    current = RotateLL(current);
+                }
+                else
+                {
+                    current = RotateLR(current);
+                }
+            }
+        }
+        // If target is found.
+        else
+        {
+            if (current.Right != null)
+            {
+                // Delete its inorder successor.
+                parent = current.Right;
+                while (parent.Left != null)
+                {
+                    parent = parent.Left;
+                }
+                current.Data = parent.Data;
+                current.Right = Delete(current.Right, parent.Data);
+                if (BalanceFactor(current) == 2) // Rebalancing.
+                {
+                    if (BalanceFactor(current.Left) >= 0)
+                    {
+                        current = RotateLL(current);
+                    }
+                    else { current = RotateLR(current); }
+                }
+            }
+            else
+            {   // If current.left != null.
+                return current.Left;
+            }
+        }
+
+
+        return current;
+    }
+    #endregion
+
+    #region Find
+    public void Find(int key)
+    {
+        if (Find(key, Root).Data == key)
+            Console.WriteLine("{0} was found!", key);
+        else
+            Console.WriteLine("Nothing found!");
+    }
+
+    private Node Find(int target, Node current)
+    {
+        if (target < current.Data)
+        {
+            if (target == current.Data)
+                return current;
+            else
+                return Find(target, current.Left);
+        }
+        else
+        {
+            if (target == current.Data)
+                return current;
+            else
+                return Find(target, current.Right);
+        }
+    }
+    #endregion
+
+    #region Private Methods
     private Node BalanceTree(Node current)
     {
-        int bFactor = BalanceFactor(current);
+        int balanceFactor = BalanceFactor(current);
 
-        if (bFactor > 1)
+        if (balanceFactor > 1)
         {
             if (BalanceFactor(current.Left) > 0)
             {
@@ -81,7 +163,7 @@ public class AVL
                 current = RotateLR(current);
             }
         }
-        else if (bFactor < -1)
+        else if (balanceFactor < -1)
         {
             if (BalanceFactor(current.Right) > 0)
             {
@@ -158,105 +240,77 @@ public class AVL
 
         return RotateRR(parent);
     }
+    #endregion
 
-    private void InOrderDisplayTree(Node current)
+    #region PreOrder
+    public void PreOrder()
     {
-        if (current != null)
+        if (Root == null)
         {
-            InOrderDisplayTree(current.Left);
-            Console.Write($"({current.Data}) ");
-            InOrderDisplayTree(current.Right);
+            Console.WriteLine("Tree is empty");
+            return;
         }
+
+        PreOrder(Root);
+        Console.WriteLine();
     }
 
-    private Node Delete(Node current, int target)
+    private void PreOrder(Node leaf)
     {
-        Node parent;
+        if (leaf == null)
+            return;
 
-        if (current == null)
-            return null;
+        Console.Write($"({leaf.Data}) ");
+        PreOrder(leaf.Left);
+        PreOrder(leaf.Right);
+    }
+    #endregion
 
-
-        // Left Sub-Tree.
-        if (target < current.Data)
+    #region InOrder
+    public void InOrder()
+    {
+        if (Root == null)
         {
-            current.Left = Delete(current.Left, target);
-            if (BalanceFactor(current) == -2)
-            {
-                if (BalanceFactor(current.Right) <= 0)
-                {
-                    current = RotateRR(current);
-                }
-                else
-                {
-                    current = RotateRL(current);
-                }
-            }
-        }
-        //right subtree
-        else if (target > current.Data)
-        {
-            current.Right = Delete(current.Right, target);
-            if (BalanceFactor(current) == 2)
-            {
-                if (BalanceFactor(current.Left) >= 0)
-                {
-                    current = RotateLL(current);
-                }
-                else
-                {
-                    current = RotateLR(current);
-                }
-            }
-        }
-        //if target is found
-        else
-        {
-            if (current.Right != null)
-            {
-                //delete its inorder successor
-                parent = current.Right;
-                while (parent.Left != null)
-                {
-                    parent = parent.Left;
-                }
-                current.Data = parent.Data;
-                current.Right = Delete(current.Right, parent.Data);
-                if (BalanceFactor(current) == 2)//rebalancing
-                {
-                    if (BalanceFactor(current.Left) >= 0)
-                    {
-                        current = RotateLL(current);
-                    }
-                    else { current = RotateLR(current); }
-                }
-            }
-            else
-            {   // If current.left != null
-                return current.Left;
-            }
+            Console.WriteLine("Tree is empty");
+            return;
         }
 
-
-        return current;
+        InOrder(Root);
+        Console.WriteLine();
     }
 
-    private Node Find(int target, Node current)
+    private void InOrder(Node leaf)
     {
-        if (target < current.Data)
+        if (leaf == null)
+            return;
+
+        InOrder(leaf.Left);
+        Console.Write($"({leaf.Data}) ");
+        InOrder(leaf.Right);
+    }
+    #endregion
+
+    #region PostOrder
+    public void PostOrder()
+    {
+        if (Root == null)
         {
-            if (target == current.Data)
-                return current;
-            else
-                return Find(target, current.Left);
+            Console.WriteLine("Tree is empty");
+            return;
         }
-        else
-        {
-            if (target == current.Data)
-                return current;
-            else
-                return Find(target, current.Right);
-        }
+
+        PostOrder(Root);
+        Console.WriteLine();
+    }
+
+    private void PostOrder(Node leaf)
+    {
+        if (leaf == null)
+            return;
+
+        PostOrder(leaf.Left);
+        PostOrder(leaf.Right);
+        Console.Write($"({leaf.Data}) ");
     }
     #endregion
 }

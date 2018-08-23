@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 public class Edge
 {
     #region Members
@@ -12,9 +9,9 @@ public class Edge
     #region Constructor
     public Edge(Vertice newSourceVertice, Vertice newDestinationVertice, int weight = 0)
     {
-        this.Weight = weight;
-        this.Source = newSourceVertice;
-        this.Destination = newDestinationVertice;
+        Weight = weight;
+        Source = newSourceVertice;
+        Destination = newDestinationVertice;
     }
     #endregion
 }

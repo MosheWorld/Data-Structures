@@ -8,3 +8,4 @@ c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Stack\obj\Deb
 c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Stack\obj\Debug\netcoreapp2.0\Stack.AssemblyInfo.cs
 c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Stack\obj\Debug\netcoreapp2.0\Stack.dll
 c:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Stack\obj\Debug\netcoreapp2.0\Stack.pdb
+C:\Users\mmosh\Desktop\Moshe Files\GitHub Projects\Data Structures\Stack\obj\Debug\netcoreapp2.0\Stack.csprojAssemblyReference.cache

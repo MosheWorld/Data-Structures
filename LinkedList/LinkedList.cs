@@ -12,9 +12,9 @@ public class LinkedList<T>
     #region Constructor
     public LinkedList()
     {
-        this.Head = null;
-        this.Tail = null;
-        this.Counter = 0;
+        Head = null;
+        Tail = null;
+        Counter = 0;
     }
     #endregion
 
